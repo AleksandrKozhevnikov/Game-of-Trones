@@ -1,0 +1,9 @@
+.toggle-btn {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    outline: none;
+}
