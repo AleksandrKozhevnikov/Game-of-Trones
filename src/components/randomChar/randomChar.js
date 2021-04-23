@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import './randomChar.css';
 import gotService from '../../services/gotService';
 import Spinner from '../spinner';
 import ErrorMessage from '../errorMessage';
+
+import './randomChar.css';
 
 export default class RandomChar extends Component {
 
@@ -37,7 +38,7 @@ export default class RandomChar extends Component {
 
     componentDidMount() {
         this.updateChar();
-        this.timerId = setInterval(this.updateChar, 5000);
+        this.timerId = setInterval(this.updateChar, this.props.timeInterval);
     }
 
     componentWillUnmount() {
@@ -61,6 +62,8 @@ export default class RandomChar extends Component {
         );
     }
 }
+
+
 
 const View = ({char}) => {
 
@@ -89,3 +92,4 @@ const View = ({char}) => {
         </>
     );
 }
+
